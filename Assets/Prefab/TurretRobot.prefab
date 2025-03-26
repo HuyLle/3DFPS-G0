@@ -442,6 +442,8 @@ MonoBehaviour:
   healthLoot: {fileID: 7479522675341554953, guid: b167dd066218c8d4694ea81c6696c81b, type: 3}
   summonPoints: []
   objectiveSummon: {fileID: 1448835540310543912, guid: 018ef79de933f5e42b8c0d3a050b5ac2, type: 3}
+  hoverbotdeathSound: {fileID: 8300000, guid: 0a338d82d61863d4aa095317ca6ce19e, type: 3}
+  turretbotdeathSound: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
 --- !u!82 &6833071891566511655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5470,6 +5472,8 @@ MonoBehaviour:
   healthLoot: {fileID: 7479522675341554953, guid: b167dd066218c8d4694ea81c6696c81b, type: 3}
   summonPoints: []
   objectiveSummon: {fileID: 0}
+  hoverbotdeathSound: {fileID: 0}
+  turretbotdeathSound: {fileID: 0}
 --- !u!1 &2158880467302815043
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,12 +28,15 @@ public class EnemyHealth : MonoBehaviour
     private bool spawnedAtHalfHealth = false;
     private bool spawnedAtLowHealth = false;
 
+    private AudioSource audioSource;
+    public AudioClip hoverbotdeathSound;
+    public AudioClip turretbotdeathSound;
     void Start()
     {
         currentHealth = maxHealth;
         //enemyAI = GetComponent<EnemyAI>();
         anim = GetComponent<Animator>();
-      
+        audioSource = GetComponent<AudioSource>();
         
 
         missionUI = FindObjectOfType<MissionUI>();       
@@ -89,6 +92,11 @@ public class EnemyHealth : MonoBehaviour
         anim.SetTrigger("OnDamaged"); // Có thể dùng animation Die nếu có
         // Hiệu ứng nổ 
         Instantiate(explosionEffectPrefab, explosionPoit.position, Quaternion.identity);
+        if (isTurretBot)
+        {
+            audioSource.PlayOneShot(turretbotdeathSound);
+        }
+        else audioSource.PlayOneShot(hoverbotdeathSound);
         DropHealthPickup();
 
         if (missionUI != null)

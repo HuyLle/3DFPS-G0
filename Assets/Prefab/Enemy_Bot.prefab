@@ -35913,6 +35913,8 @@ MonoBehaviour:
   healthLoot: {fileID: 7479522675341554953, guid: b167dd066218c8d4694ea81c6696c81b, type: 3}
   summonPoints: []
   objectiveSummon: {fileID: 0}
+  hoverbotdeathSound: {fileID: 8300000, guid: 0a338d82d61863d4aa095317ca6ce19e, type: 3}
+  turretbotdeathSound: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
 --- !u!135 &8007031436907163340
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -23,10 +23,15 @@ public class TurretBotAI : MonoBehaviour
     public GameObject energyBallPrefab;
     public GameObject barrier;
     public EnemyHealth health;
+
+    private AudioSource audioSource;
+    public AudioClip attackSound;
+    public AudioClip alertSound;
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        audioSource = GetComponent<AudioSource>();
 
         vfx_alert.Stop();
         vfx_muzzle.Stop();
@@ -44,6 +49,7 @@ public class TurretBotAI : MonoBehaviour
                 isActive = true;
                 animator.SetBool("IsActive", true);
                 vfx_alert.Play();
+                audioSource.PlayOneShot(alertSound);
             }
 
             RotateTowardsPlayer();
@@ -87,7 +93,7 @@ public class TurretBotAI : MonoBehaviour
     {
         vfx_muzzle.Play();
         //Instantiate(vfx_muzzle, firePoint.position, firePoint.rotation);
-
+        audioSource.PlayOneShot(attackSound);
         
         if (energyBallPrefab == null || firePoint == null)
         {

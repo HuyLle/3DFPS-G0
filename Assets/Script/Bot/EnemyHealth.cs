@@ -27,16 +27,14 @@ public class EnemyHealth : MonoBehaviour
 
     private bool spawnedAtHalfHealth = false;
     private bool spawnedAtLowHealth = false;
+
     void Start()
     {
         currentHealth = maxHealth;
         //enemyAI = GetComponent<EnemyAI>();
         anim = GetComponent<Animator>();
-        //hitSparks = GetComponentsInChildren<ParticleSystem>(); // Lấy tất cả ParticleSystem con
-        //foreach (ParticleSystem ps in hitSparks)
-        //{
-        //    ps.Stop(); // Đảm bảo tắt ban đầu
-        //}
+      
+        
 
         missionUI = FindObjectOfType<MissionUI>();       
     }

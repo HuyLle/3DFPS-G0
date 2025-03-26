@@ -38,7 +38,7 @@ public class MissionUI : MonoBehaviour
             currentMission = "Kill TurretBot";
             totalEnemies = CountEnemiesWithTag("TurretBot");
         }
-
+        missionText.color = defaultColor; // Reset lại màu chữ
         UpdateMissionText();
     }
 
@@ -72,7 +72,7 @@ public class MissionUI : MonoBehaviour
             missionText.text = "Mission Complete!";
         }
 
-        missionText.color = defaultColor; // Reset lại màu chữ
+        //missionText.color = defaultColor; // Reset lại màu chữ
     }
 
     private void ActivateObjective(GameObject objective)
